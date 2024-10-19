@@ -31,6 +31,8 @@ Make sure you have **Node.js** installed on your machine before proceeding.
 2. **Clone the Repository**  
    ```sh
    git clone https://github.com/<your-username>/cuchi-pomodoro.git
+   ```
+   ```sh
    cd cuchi-pomodoro
    ```
    
@@ -115,6 +117,5 @@ After setting up the project locally:
 ---
 
 
-## 💡 **Acknowledgments**
 
 - Inspired by the **Pomodoro Technique** created by Francesco Cirillo.
