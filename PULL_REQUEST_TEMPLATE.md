@@ -18,4 +18,4 @@ Please check the following boxes before submitting your pull request:
 ## Related Issues
 If this pull request addresses any existing issues, please list them here. Use the format `Closes #issue_number` to link the issue.
 
-- Closes # (issue number if applicable)
+- Closes # (issue number)
