@@ -103,7 +103,7 @@ Follow these steps when you're ready to submit a pull request:
    git commit -m "Add [feature/bug] description"
    ```
 
-4. **Push Your Branch**
+4. **Push Your Branch**  
    Push your changes to your fork:
    ```bash
    git push origin your-feature-branch
