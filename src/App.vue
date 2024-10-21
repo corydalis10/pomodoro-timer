@@ -4,19 +4,19 @@ import PomodoroTimer from './components/PomodoroTimer.vue'
 import { ref, onMounted } from 'vue'
 
 // reactive state for light/dark mode
-const isLightMode = ref(localStorage.getItem('mode') === 'light')
+const isDarkMode = ref(localStorage.getItem('mode') === 'dark')
 
 // function to toggle light/dark mode
 const toggleMode = () => {
-  isLightMode.value = !isLightMode.value
-  document.body.classList.toggle('light-mode', isLightMode.value)
-  localStorage.setItem('mode', isLightMode.value ? 'dark' : 'light')
+  isDarkMode.value = !isDarkMode.value
+  document.body.classList.toggle('dark-mode', isDarkMode.value)
+  localStorage.setItem('mode', isDarkMode.value ? 'dark' : 'light')
 }
 
 // on mount
 onMounted(() => {
-  if (isLightMode.value) {
-    document.body.classList.add('light-mode');
+  if (isDarkMode.value) {
+    document.body.classList.add('dark-mode');
   }
 });
 
@@ -24,12 +24,12 @@ onMounted(() => {
 
 <template>
   <!--adding a div to wrap the content and apply the dark-mode class conditionally-->
-<div :class="{ 'light-mode': isLightMode }" class="body-container">
+<div :class="{ 'dark-mode': isDarkMode }" class="body-container">
   <!--title-->
   <h1>Welcome to Cuchi Pomodoro</h1>
   <!--toggle button-->
-  <button @click="toggleMode" class="toggle-mode">
-    {{ isLightMode ? 'Dark Mode' : 'Light Mode' }}
+  <button @click="toggleMode">
+    {{ isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode' }}
   </button>
   <!--pomodoro timer component-->
   <PomodoroTimer></PomodoroTimer>
@@ -37,10 +37,10 @@ onMounted(() => {
 </template>
 
 <style scoped>
-/* dark mode */
+/* light mode */
 @import './assets/main.css';
 
-/* light mode */
-@import './assets/light-mode.css';
+/* dark mode */
+@import './assets/dark-mode.css';
 
 </style>
