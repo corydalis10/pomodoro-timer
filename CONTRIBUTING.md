@@ -13,7 +13,7 @@ Thank you for considering contributing to **Cuchi-Pomodoro**! Whether you're a b
 ---
 
 ## Code of Conduct
-This project adheres to the [Contributor Covenant Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code, ensuring a welcoming and respectful environment for all contributors.
+This project is guided by our [Code of Conduct](CODE_OF_CONDUCT.md). We strive to foster a positive and inclusive environment for all contributors. By participating, you contribute to making **Cuchi-Pomodoro** a welcoming space for everyone!
 
 ---
 
