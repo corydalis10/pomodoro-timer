@@ -16,24 +16,23 @@ const toggleMode = () => {
 // on mount
 onMounted(() => {
   if (isDarkMode.value) {
-    document.body.classList.add('dark-mode');
+    document.body.classList.add('dark-mode')
   }
-});
-
+})
 </script>
 
 <template>
   <!--adding a div to wrap the content and apply the dark-mode class conditionally-->
-<div :class="{ 'dark-mode': isDarkMode }" class="body-container">
-  <!--title-->
-  <h1>Welcome to Cuchi Pomodoro</h1>
-  <!--toggle button-->
-  <button @click="toggleMode">
-    {{ isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode' }}
-  </button>
-  <!--pomodoro timer component-->
-  <PomodoroTimer></PomodoroTimer>
-</div>
+  <div :class="{ 'dark-mode': isDarkMode }" class="body-container">
+    <!--title-->
+    <h1>Welcome to Cuchi Pomodoro</h1>
+    <!--toggle button-->
+    <button class="button" @click="toggleMode">
+      {{ isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode' }}
+    </button>
+    <!--pomodoro timer component-->
+    <PomodoroTimer></PomodoroTimer>
+  </div>
 </template>
 
 <style scoped>
@@ -42,5 +41,4 @@ onMounted(() => {
 
 /* dark mode */
 @import './assets/dark-mode.css';
-
 </style>

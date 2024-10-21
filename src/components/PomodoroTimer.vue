@@ -82,23 +82,8 @@ onUnmounted(() => {
   border-radius: 0.5rem;
 }
 
-.button {
-  background-color: #91d293;
-  color: white;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 8px;
-  border: none;
-}
-
 /* dark mode */
 .dark-mode .button {
   background-color: rgb(126, 142, 97);
 }
-
 </style>

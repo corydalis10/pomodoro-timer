@@ -14,7 +14,6 @@ body {
   background-repeat: no-repeat; /* Prevents the background image from repeating */
 }
 
-
 a,
 .green {
   text-decoration: none;
@@ -29,6 +28,34 @@ a,
   position: absolute;
   bottom: 56px;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+button {
+  background-color: #91d293;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  height: 400px;
+  width: 600px;
+  border-radius: 10%;
+  margin-left: 300px;
 }
 
 @media (hover: hover) {
@@ -49,5 +76,3 @@ a,
     padding: 0 2rem;
   }
 }
-
-
