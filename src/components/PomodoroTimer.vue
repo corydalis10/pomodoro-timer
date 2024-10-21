@@ -70,6 +70,16 @@ onUnmounted(() => {
 .counter {
   font-size: 2rem;
   text-align: center;
+  color: rgb(66, 66, 66);
+  background-color: rgb(252, 238, 238);
+  border-radius: 0.5rem;
+}
+
+/* dark mode */
+.dark-mode .counter {
+  color: rgb(204, 190, 190);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
 }
 
 .button {
@@ -85,4 +95,10 @@ onUnmounted(() => {
   border-radius: 8px;
   border: none;
 }
+
+/* dark mode */
+.dark-mode .button {
+  background-color: rgb(126, 142, 97);
+}
+
 </style>
