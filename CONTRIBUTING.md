@@ -71,7 +71,7 @@ To ensure your contribution is easy to review and integrate:
    git commit -m "Fix bug in timer reset logic"
    ```
 
-3 **Consistent Code Style**: Follow the project's coding style. Make sure your code is properly formatted by running:
+3. **Consistent Code Style**: Follow the project's coding style. Make sure your code is properly formatted by running:
    ```bash
    npm run lint
    ```
