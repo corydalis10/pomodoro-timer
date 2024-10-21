@@ -1,0 +1,7 @@
+.light-mode body {
+    background-image: url('https://wartonnosound.com/wp-content/uploads/2023/05/Blog-Post-image-for-lofi-music-and-relaxing.jpg'); /* Adjust the path as necessary */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents the background image from repeating */
+}
+
