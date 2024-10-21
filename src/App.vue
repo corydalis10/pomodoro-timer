@@ -23,8 +23,17 @@ onMounted(() => {
 </script>
 
 <template>
+  <!--adding a div to wrap the content and apply the dark-mode class conditionally-->
+<div :class="{ 'dark-mode': isDarkMode }" class="body-container">
+  <!--title-->
   <h1>Welcome to Cuchi Pomodoro</h1>
+  <!--toggle button-->
+  <button @click="toggleMode" class="toggle-mode">
+    {{ isDarkMode ? 'Light Mode' : 'Dark Mode' }}
+  </button>
+  <!--pomodoro timer component-->
   <PomodoroTimer></PomodoroTimer>
+</div>
 </template>
 
 <style scoped>
