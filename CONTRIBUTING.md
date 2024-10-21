@@ -22,7 +22,7 @@ This project is guided by our [Code of Conduct](CODE_OF_CONDUCT.md). We strive t
 We value any kind of contribution. Here's how you can get started:
 
 - **Report Bugs**: Find an issue? Open a new issue with details on how to reproduce it.
-- **Suggest Features**: Have an idea to enhance the project? Open a [feature request](link to issues) to discuss it.
+- **Suggest Features**: Have an idea to enhance the project? Open a new issue to discuss it.
 - **Fix Bugs**: Take a look at open issues and work on fixing bugs. Check the "good first issue" label if you're new to the project.
 - **Improve Documentation**: Documentation is key! Help us improve this file, the README, or add tutorials.
 - **Write Unit Tests**: Improve the test coverage by writing or enhancing unit tests.
