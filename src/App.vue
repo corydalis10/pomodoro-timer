@@ -1,9 +1,9 @@
 <script setup>
 import PomodoroTimer from './components/PomodoroTimer.vue'
+import SpotifyPlayer from './components/SpotifyPlayer.vue'
 import { ref, onMounted } from 'vue'
 import '@/assets/toggle.css'
 
-// reactive state for light/dark mode
 const isDarkMode = ref(localStorage.getItem('mode') === 'dark')
 const toggleMode = () => {
   isDarkMode.value = !isDarkMode.value
@@ -39,12 +39,20 @@ onMounted(() => {
     <h1>Welcome to Cuchi Pomodoro</h1>
 
     <!-- Toggle button -->
+    <h1>Welcome to Cuchi Pomodoro</h1>
     <button class="button" @click="toggleMode">
       {{ isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode' }}
     </button>
 
     <!-- Pomodoro timer component, passing soundEnabled as a prop -->
     <PomodoroTimer :sound-enabled="soundEnabled" />
+    
+    <!-- Pomodoro Timer -->
+    <PomodoroTimer />
+
+    <!-- Spotify Player -->
+    <SpotifyPlayer />
+
   </div>
 </template>
 
