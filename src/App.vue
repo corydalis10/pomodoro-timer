@@ -32,27 +32,20 @@ onMounted(() => {
         <input type="checkbox" v-model="soundEnabled" />
         <span class="slider"></span>
       </label>
-      <span class="toggle-label">{{ soundEnabled ? 'Sound Notification On' : 'Sound Notification Off' }}</span>
+      <span class="toggle-label">{{
+        soundEnabled ? 'Sound Notification On' : 'Sound Notification Off'
+      }}</span>
     </div>
 
-    <!-- Title -->
     <h1>Welcome to Cuchi Pomodoro</h1>
 
-    <!-- Toggle button -->
-    <h1>Welcome to Cuchi Pomodoro</h1>
     <button class="button" @click="toggleMode">
       {{ isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode' }}
     </button>
 
-    <!-- Pomodoro timer component, passing soundEnabled as a prop -->
-    <PomodoroTimer :sound-enabled="soundEnabled" />
-    
-    <!-- Pomodoro Timer -->
-    <PomodoroTimer />
+    <PomodoroTimer :sound-enabled="soundEnabled"></PomodoroTimer>
 
-    <!-- Spotify Player -->
     <SpotifyPlayer />
-
   </div>
 </template>
 
