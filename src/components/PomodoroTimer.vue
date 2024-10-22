@@ -7,11 +7,17 @@ const props = defineProps({
     required: true,
     default: 1500,
   },
+  soundEnabled: {
+    type: Boolean,
+    default: true,
+  },
 })
 
 const timeLeft = ref(props.initialTime)
 const timerRunning = ref(false)
 let timerInterval
+
+const tickingBellSound = new Audio('/sound/timer-with-chime.mp3')
 
 const startTimer = () => {
   if (timerRunning.value) return
@@ -19,6 +25,11 @@ const startTimer = () => {
   timerRunning.value = true
   timerInterval = setInterval(() => {
     timeLeft.value--
+
+    if (timeLeft.value === 11 && props.soundEnabled) {
+      tickingBellSound.play()
+    }
+
     if (timeLeft.value <= 0) {
       clearInterval(timerInterval)
       timerRunning.value = false
