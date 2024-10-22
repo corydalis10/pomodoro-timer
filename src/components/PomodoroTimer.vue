@@ -1,6 +1,7 @@
 <script setup>
-import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { ref, watch, onUnmounted, computed } from 'vue'
 
+const originalTitle = document.title;
 const props = defineProps({
   initialWorkTime: {
     type: Number,
@@ -72,8 +73,22 @@ const seconds = computed(() => {
   return (timeLeft.value % 60).toString().padStart(2, '0')
 })
 
+const formattedTime = computed(() => {
+  return `${minutes.value}:${seconds.value}`
+})
+
+watch([formattedTime, timerRunning], ([newTime, running]) => {
+  if (running) {
+    document.title = timeLeft.value > 0 ? `${newTime} - ${originalTitle}` : `Time's up! - ${originalTitle}`
+  } else {
+    document.title = originalTitle
+  }
+})
+
 onUnmounted(() => {
   clearInterval(timerInterval)
+  // Restore the original title when the component is unmounted
+  document.title = originalTitle
 })
 </script>
 
