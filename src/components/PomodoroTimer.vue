@@ -2,10 +2,15 @@
 import { ref, onMounted, onUnmounted, computed } from 'vue'
 
 const props = defineProps({
-  initialTime: {
+  initialWorkTime: {
     type: Number,
     required: true,
-    default: 1500,
+    default: 25 * 60, // 25 minutes in seconds
+  },
+  initialBreakTime: {
+    type: Number,
+    required: true,
+    default: 5 * 60, // 5 minutes in seconds
   },
   soundEnabled: {
     type: Boolean,
@@ -13,9 +18,10 @@ const props = defineProps({
   },
 })
 
-const timeLeft = ref(props.initialTime)
+const timeLeft = ref(props.initialWorkTime) // Start with work time
 const timerRunning = ref(false)
 let timerInterval
+const isWorkTime = ref(true) // Keep track of work/break state
 
 const tickingBellSound = new Audio('/sound/timer-with-chime.mp3')
 
@@ -33,6 +39,7 @@ const startTimer = () => {
     if (timeLeft.value <= 0) {
       clearInterval(timerInterval)
       timerRunning.value = false
+      switchTimerMode() // Switch between work and break time
     }
   }, 1000)
 }
@@ -46,6 +53,13 @@ const resumeTimer = () => {
   if (timeLeft.value > 0) {
     startTimer()
   }
+}
+
+const switchTimerMode = () => {
+  isWorkTime.value = !isWorkTime.value
+  timeLeft.value = isWorkTime.value
+    ? props.initialWorkTime
+    : props.initialBreakTime
 }
 
 const minutes = computed(() => {
@@ -65,12 +79,15 @@ onUnmounted(() => {
 
 <template>
   <div class="counter">
+    <div>{{ isWorkTime ? 'Work Time' : 'Break Time' }}</div>
     <div v-if="timeLeft > 0">{{ minutes }}:{{ seconds }}</div>
-    <div v-else>¡You did it!</div>
+    <div v-else>¡Time for a break!</div>
     <button class="button" @click="startTimer" :disabled="timerRunning">
       Start
     </button>
-    <button class="button" @click="timeLeft = props.initialTime">Reset</button>
+    <button class="button" @click="switchTimerMode">
+      {{ isWorkTime ? 'Skip to Break' : 'Skip to Work' }}
+    </button>
     <button class="button" @click="timerRunning ? stopTimer() : resumeTimer()">
       {{ timerRunning ? 'Stop' : 'Resume' }}
     </button>

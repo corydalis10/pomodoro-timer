@@ -43,6 +43,7 @@ button {
   cursor: pointer;
   border-radius: 8px;
   border: none;
+  font-family: 'Arima', sans-serif;
 }
 
 .body-container {
