@@ -1,6 +1,10 @@
 <template>
     <div class="weather-widget">
       <h2>Weather in {{ city }}</h2>
+      <img
+        class="weather-icon"
+        :src="`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}.png`"
+        :alt="weatherData.weather[0].description">
       <p v-if="loading">Fetching weather...</p>
       <div v-if="weatherData && !loading">
         <p>Temperature: {{ weatherData.main.temp }}°C</p>
@@ -50,22 +54,30 @@
     font-family: "Arial", sans-serif;
     background-color: rgba(30, 30, 30, 1.0);
     position: absolute;
-    bottom: 100px;
+    bottom: 90px;
     left: 20px;
-    width: 300px;
+    width: 200px;
     height: 150px;
     border-radius: 15px;
     padding: 10px;
     font-size: 12px;
-    color: #fff;
+    color: #dfdfdf;
     text-align: left;
   }
   h2 {
     margin-bottom: 10px;
-    color: #4caf50;
+    color: #4e663a;
   }
   p {
     margin: 5px 0;
   }
+  .weather-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  position: absolute;
+  right: 5px;
+  bottom: 110px;
+  } 
   </style>
   
