@@ -44,6 +44,10 @@
     border-radius: 0.5rem;
 }
 
+.dark-mode button:hover {
+    background-color: rgb(78, 102, 58);
+}
+
 .body-container{
     display: flex;
     flex-direction: column;
