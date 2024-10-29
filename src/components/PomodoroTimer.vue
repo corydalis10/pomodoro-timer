@@ -129,4 +129,10 @@ onUnmounted(() => {
 .dark-mode .button {
   background-color: rgb(126, 142, 97);
 }
+
+/* hover effect */
+.button:hover {
+  background-color: rgb(78, 102, 58);
+}
+
 </style>

@@ -46,6 +46,11 @@ button {
   font-family: 'Arima', sans-serif;
 }
 
+/* hover effect */
+button:hover {
+  background-color: #4e663a;
+}
+
 .body-container {
   display: flex;
   flex-direction: column;
