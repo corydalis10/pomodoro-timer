@@ -134,5 +134,4 @@ onUnmounted(() => {
 .button:hover {
   background-color: rgb(78, 102, 58);
 }
-
 </style>

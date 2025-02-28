@@ -8,10 +8,10 @@
 }
 
 body {
-  background-image: url('https://wartonnosound.com/wp-content/uploads/2023/05/Blog-Post-image-for-lofi-music-and-relaxing.jpg'); /* Adjust the path as necessary */
-  background-size: cover; /* Ensures the image covers the entire background */
-  background-position: center; /* Centers the background image */
-  background-repeat: no-repeat; /* Prevents the background image from repeating */
+  background-image: url('https://wartonnosound.com/wp-content/uploads/2023/05/Blog-Post-image-for-lofi-music-and-relaxing.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 a,
@@ -22,13 +22,20 @@ a,
   padding: 3px;
 }
 
-.footer-about {
-  width: 100vw;
-  padding: 0 24px;
-  position: absolute;
-  bottom: 30px;
+.body-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.4);
+  color: #4e663a;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 350px;
+  width: 550px;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-left: 325px;
 }
 
 button {
@@ -43,25 +50,12 @@ button {
   cursor: pointer;
   border-radius: 8px;
   border: none;
-  font-family: 'Arima', sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 
 /* hover effect */
 button:hover {
   background-color: #4e663a;
-}
-
-.body-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  text-align: center;
-  height: 400px;
-  width: 600px;
-  border-radius: 10%;
-  margin-left: 300px;
 }
 
 @media (hover: hover) {
@@ -73,7 +67,6 @@ button:hover {
 @media (min-width: 1024px) {
   body {
     display: flex;
-    place-items: center;
   }
 
   #app {
@@ -81,4 +74,18 @@ button:hover {
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
+}
+
+.dark-mode .body-container {
+  color: #cbcbcb;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode button {
+  background-color: rgb(126, 142, 97);
+  color: white;
+}
+
+.dark-mode button:hover {
+  background-color: rgb(78, 102, 58);
 }

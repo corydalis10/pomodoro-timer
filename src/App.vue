@@ -1,8 +1,5 @@
 <script setup>
 import PomodoroTimer from './components/PomodoroTimer.vue'
-import SpotifyPlayer from './components/SpotifyPlayer.vue'
-// weather API
-import WeatherComponent from './components/WeatherComponent.vue'
 import { ref, onMounted } from 'vue'
 import '@/assets/toggle.css'
 
@@ -46,17 +43,5 @@ onMounted(() => {
     </button>
 
     <PomodoroTimer :sound-enabled="soundEnabled"></PomodoroTimer>
-
-    <SpotifyPlayer />
-    <!-- weather component -->
-    <WeatherComponent />
   </div>
 </template>
-
-<style scoped>
-/* light mode */
-@import './assets/main.css';
-
-/* dark mode */
-@import './assets/dark-mode.css';
-</style>
