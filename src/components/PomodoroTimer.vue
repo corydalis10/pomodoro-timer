@@ -114,24 +114,16 @@ onUnmounted(() => {
   font-size: 2rem;
   text-align: center;
   color: rgb(66, 66, 66);
-  background-color: rgb(252, 238, 238);
+  background-color: rgba(255, 255, 255, 0.685);
   border-radius: 0.5rem;
+  margin: 0.5rem;
+  padding: 1rem;
 }
 
 /* dark mode */
 .dark-mode .counter {
-  color: rgb(204, 190, 190);
+  color: #eaeaea;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 0.5rem;
-}
-
-/* dark mode */
-.dark-mode .button {
-  background-color: rgb(126, 142, 97);
-}
-
-/* hover effect */
-.button:hover {
-  background-color: rgb(78, 102, 58);
 }
 </style>

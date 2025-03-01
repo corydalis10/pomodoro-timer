@@ -32,11 +32,11 @@ onMounted(() => {
         <span class="slider"></span>
       </label>
       <span class="toggle-label">{{
-        soundEnabled ? 'Sound Notification On' : 'Sound Notification Off'
+        soundEnabled ? 'Sound On' : 'Sound Off'
       }}</span>
     </div>
 
-    <h1>Welcome to Cuchi Pomodoro</h1>
+    <h1>Welcome to Pomodoro Timer</h1>
 
     <button class="button" @click="toggleMode">
       {{ isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode' }}

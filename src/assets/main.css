@@ -2,24 +2,13 @@
 
 #app {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
 }
 
 body {
-  background-image: url('https://wartonnosound.com/wp-content/uploads/2023/05/Blog-Post-image-for-lofi-music-and-relaxing.jpg');
+  background-image: url('./background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
 }
 
 .body-container {
@@ -29,7 +18,7 @@ a,
   justify-content: center;
   height: 100vh;
   text-align: center;
-  color: #4e663a;
+  color: #27331d;
   background-color: rgba(255, 255, 255, 0.5);
   height: 350px;
   width: 550px;
@@ -46,22 +35,17 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 0.2rem;
   cursor: pointer;
   border-radius: 8px;
   border: none;
   font-family: 'Poppins', Arial, sans-serif;
+  transition: 0.3s;
 }
 
 /* hover effect */
 button:hover {
   background-color: #4e663a;
-}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
 }
 
 @media (min-width: 1024px) {
@@ -77,15 +61,10 @@ button:hover {
 }
 
 .dark-mode .body-container {
-  color: #cbcbcb;
+  color: #e4e4e4;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
 .dark-mode button {
-  background-color: rgb(126, 142, 97);
   color: white;
-}
-
-.dark-mode button:hover {
-  background-color: rgb(78, 102, 58);
 }
